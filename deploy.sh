@@ -29,7 +29,7 @@ ssh -o StrictHostKeyChecking=no -i $SSH_KEY_PATH $EC2_USER@$EC2_HOST << EOF
   # Pull the latest code from the GitHub repository
   git pull https://github.com/Manshu-i3/CICDtest.git 
   pkill -f app.py
-  nohup python3 app.py 
+  python3 app.py 
 EOF
 
 echo "Deployment completed successfully!"
