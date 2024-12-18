@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Enable error handling: exit if any command fails
-set -e
+
 
 # Define the name of the parameter in SSM (AWS Systems Manager)
 PARAMETER_NAME="/flask/sshkey"
