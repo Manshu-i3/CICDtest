@@ -33,7 +33,7 @@ ssh -o StrictHostKeyChecking=no -i $SSH_KEY_PATH $EC2_USER@$EC2_HOST << EOF
   
   
   # Start the app (assumes your app is a Python Flask app)
-  nohup python3 app.py & || exit
+  python3 app.py & || exit
 EOF
 
 echo "Deployment completed successfully!"
