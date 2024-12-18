@@ -5,14 +5,21 @@ phases:
     runtime-versions:
       python: 3.x
     commands:
-      - echo Installing dependencies...
+      - echo "Installing dependencies"
       - pip install -r requirements.txt
 
   build:
     commands:
-      - echo Running tests...
-      
+      - echo "Building the application"
+      - # Add any build commands here, like tests, etc.
+
+  post_build:
+    commands:
+      - echo "Running deploy script"
+      - chmod +x deploy.sh
+      - ./deploy.sh
 
 artifacts:
   files:
-    - app.py
+    - '**/*'
+  discard-paths: yes
