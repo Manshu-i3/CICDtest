@@ -27,13 +27,8 @@ ssh -o StrictHostKeyChecking=no -i $SSH_KEY_PATH $EC2_USER@$EC2_HOST << EOF
   cd /home/ubuntu/Deployment || exit
   
   # Pull the latest code from the GitHub repository
-  git pull https://github.com/Manshu-i3/CICDtest.git || exit
-  
-  # Install dependencies
-  
-  
-  # Start the app (assumes your app is a Python Flask app)
-  python3 app.py & || exit
+  git pull https://github.com/Manshu-i3/CICDtest.git 
+  python3 app.py 
 EOF
 
 echo "Deployment completed successfully!"
